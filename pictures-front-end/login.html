@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> LOGIN - Pictures</title>
+	<meta charset="UTF-8">
+	<!-- icone -->
+	<link rel="icon" href="imagens/icon.jpg">
+	<!-- Link Css -->
+	<link rel="stylesheet" href="css/estilo.css">
+    <!-- Font Awesome -->
+   <script defer src="font-awesome/fontawesome-all.js"></script>
+   <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.css">
+   <link href="https://fonts.googleapis.com/css?family=Unica+One" rel="stylesheet">
+</head>
+
+<body onLoad="trocaFundo()">
+
+<script language="JavaScript" type="text/JavaScript" >
+
+    primeiro = new Image;
+    segundo = new Image;
+    terceiro = new Image;
+    
+    primeiro.src = "imagens/foto1.jpg";
+    segundo.src = "imagens/foto5.jpg";
+    terceiro.src = "imagens/foto6.jpg";
+
+    background = new Array(primeiro.src,segundo.src,terceiro.src);
+    indice = 0;
+
+function trocaFundo(){
+    if ( indice == 3 ) { indice = 0; } // faz o indice voltar ao inicio quando chega na ultima imagem
+    
+    else {
+        document.body.style.backgroundImage="url("+background[indice]+")";
+        ++indice;        
+    }
+
+    setTimeout("trocaFundo()", 4 * 1000 );
+}    
+
+
+</script>
+<nav>
+	<ul>
+		<li class="texto"><a href="index.html">	<i class="fas fa-home"> </i> Home </a></li>
+		<li class="texto"><a href="index.html">	Contato </a> </li>
+		<li class="texto"><a href="index.html"> Sobre </a> </li>
+		<li class="texto"><a href="index.html"> Termos </a> </li>
+		<li id="desen"> Desenvolvido por <br>Ana Caroline Lisboa Silva </li>
+	</ul>
+</nav>	
+<div id="row4">
+	<div id="principal_login" class="container_todos box-shadow">
+		<form action="#" method="#" id="form_login">
+			<h1 class="texto">Login</h1>
+			<label for="email_login" class="tit_form texto">E-mail</label>
+			<input type="text" id="email_login" name="email_login" placeholder="digite seu e-mail"><br>
+			<label for="senha_login" class="tit_form texto">Senha</label>
+			<input type="password" id="senha_login" name="senha_login" placeholder="digite sua senha">
+			<h5 id="esq_senha" class="texto"><a href=""> Esqueci a senha!</a></h5>
+			<p class="text"><button class="button_sm_form btn box-shadow">Entrar</button></p>
+			<br class="clear">
+		</form>
+	</div>
+</div><!-- row -->
+
+
+<div id="row2">
+	<div class="container-icons">
+		<div class="conteudo">
+			<p class="circulo">	
+				<i class="fas fa-camera-retro icons"></i>	
+			</p>
+			<p class="texto">Crie e edite do seu jeito</p>
+		</div>
+
+		<div class="conteudo">
+			<p class="circulo">	
+				<i class="far fa-images icons"></i>	
+			</p>
+			<p class="texto">Tenha sua própria galeria e colecione lembranças</p>
+		</div>
+
+		<div class="conteudo">
+			<p class="circulo">	
+				<i class="far fa-user icons"></i>	
+			</p>
+			<p class="texto">Compartilhe seus melhores momentos e conheça novas inspirações</p>
+		</div>
+	</div><!-- container-icons -->
+</div><!-- row2 -->
+</body>
+</html>
